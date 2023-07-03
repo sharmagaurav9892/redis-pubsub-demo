@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "61b2ec47-6816-4a08-a200-05b361582eb7",
+		"name": "redis-pubsub-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26600697"
+	},
+	"item": [
+		{
+			"name": "Publish New Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 101,\n    \"name\" : \"Macbook Air\",\n    \"qty\" : 10,\n    \"price\" : 92900\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9292/publish",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish another product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 102,\n    \"name\" : \"iPad\",\n    \"qty\" : 25,\n    \"price\" : 42000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9292/publish",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
